@@ -1,0 +1,102 @@
+
+#types, #input{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 20px;
+ margin: 30px;
+}
+.select, .search{
+ padding: 10px 20px;
+         background-color: #f1f1f1;
+         color: black;
+         border: 1px solid;
+         border-radius: 4px;
+}
+button{
+ /* display: block; */
+         /* margin: 20px auto; */
+         padding: 10px 20px;
+         background-color: #4CAF50;
+         color: white;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+}
+
+     .pokemonDisplay {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 30px;
+     }
+
+     .displayflip {
+         perspective: 1000px;
+     }
+
+     .displayCardInner {
+         width: 200px;
+         height: 350px; /* Increased height */
+         position: relative;
+         transform-style: preserve-3d;
+         transition: transform 0.9s;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         border-radius: 10px;
+     }
+
+     .displayflip:hover .displayCardInner {
+         transform: rotateY(180deg);
+     }
+
+     .displayfrontCard,
+     .displayBackFrontCard {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         backface-visibility: hidden;
+         border-radius: 10px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .displayfrontCard {
+         border: 1px solid #ddd;
+     }
+
+     .displayBackFrontCard {
+         transform: rotateY(180deg);
+         border: 1px solid #ddd;
+     }
+
+     .displayfrontCard img {
+         width: 120px;
+         height: 120px;
+     }
+
+     .displayfrontCard h3,
+     .displayfrontCard p,
+     .displayBackFrontCard p {
+         margin: 5px;
+     }
+     .stat {
+         font-size: 14px;
+     }
+     .pokemon-id {
+         width: 195px;
+         align-items: baseline;
+         background-color: #fff;
+         text-align: center;
+     }
+     .load-more {
+         display: block;
+         margin: 20px auto;
+         padding: 10px 20px;
+         background-color: #4CAF50;
+         color: white;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+     }
+ 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="types">
+      <select name="carddata" id="carddata" class="select">
+        <option value="type" selected disabled>Type</option>
+        <option value="grass">Grass</option>
+        <option value="fire">Fire</option>
+        <option value="bug">Bug</option>
+        <option value="water">Water</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Poison</option>
+        <option value="electric">Electric</option>
+        <option value="ground">Ground</option>
+        <option value="fairy">Fairy</option>
+        <option value="fighting">Fighting</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="ghost">Ghost</option>
+        <option value="ice">Ice</option>
+        <option value="dragon">Dragon</option>
+      </select>
+      <button class="typed" onclick="searchPokemonsByType()">
+        Search By Type
+      </button>
+    </div>
+
+    <div id="input">
+      <input
+        type="text"
+        id="pokemon-name-input"
+        placeholder="Enter Pokemon Name"
+        oninput="searchPokemonsByName()"
+        class="search"
+      />
+      <!-- <button onclick="searchPokemonsByName()">Search By Name</button> -->
+    </div>
+
+    <div id="pokemon-display" class="pokemonDisplay"></div>
+    <button class="load-more" onclick="loadMorePokemons()">Load More</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
