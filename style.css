@@ -1,4 +1,58 @@
 
+body{
+    font-family: 'Amatic SC', cursive;
+    /* background-color: #0bb2e0; */
+    background-image: url(https://images8.alphacoders.com/548/thumb-1920-548142.jpg);
+    /* background-image: url(LAPTOP-WALLPAPER-HD.jpg); */
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+   
+}
+
+.geekstermon {
+    font-family: 'Amatic SC', cursive;
+    /* Your existing styles */
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 58px;
+    color: #4CAF50; /* Dark gray color */
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+/* Create a unique underline effect */
+.geekstermon::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 2px;
+    background-color: #4A90E2;
+    opacity: 0.5;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect for the underline */
+.geekstermon:hover::after {
+    width: 100%;
+}
+
+/* Glowing effect on hover */
+@keyframes glowing {
+    0% { color: #4CAF50; }
+    30% { color: #c7d31f; } /* Change to any color you want for the glow */
+    60% { color: #4CAF50; }
+    90%{ color: #00ffff}
+}
+
+.geekstermon:hover {
+    animation: glowing 1s infinite; /* Adjust the animation duration as needed */
+}
+
 #types, #input{
  display: flex;
  align-items: center;
@@ -13,6 +67,17 @@
          border: 1px solid;
          border-radius: 4px;
 }
+.pokemon-type{
+    /* border: 2px solid; */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+
+}
+.displayfrontCard p{
+    color: #333;
+    font-weight: 600;
+}
 button{
  /* display: block; */
          /* margin: 20px auto; */
@@ -26,12 +91,15 @@ button{
 
      .pokemonDisplay {
          display: flex;
+         justify-content: space-evenly;
          flex-wrap: wrap;
-         gap: 30px;
+         gap: 50px;
+        
      }
 
      .displayflip {
          perspective: 1000px;
+         margin-top: 30px;
      }
 
      .displayCardInner {
@@ -46,6 +114,9 @@ button{
 
      .displayflip:hover .displayCardInner {
          transform: rotateY(180deg);
+     }
+     .displayfrontCard{
+        
      }
 
      .displayfrontCard,
@@ -63,6 +134,8 @@ button{
 
      .displayfrontCard {
          border: 1px solid #ddd;
+         gap: 15px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
      }
 
      .displayBackFrontCard {

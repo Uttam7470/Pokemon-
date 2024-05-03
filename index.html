@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="main">
+    <h1 class="geekstermon">GEEKSTERMON</h1>
     <div id="types">
       <select name="carddata" id="carddata" class="select">
         <option value="type" selected disabled>Type</option>
@@ -27,8 +29,9 @@
         <option value="dragon">Dragon</option>
       </select>
       <button class="typed" onclick="searchPokemonsByType()">
-        Search By Type
+        Filter By Type
       </button>
+      <button onclick="resetSearch()">Reset</button>
     </div>
 
     <div id="input">
@@ -44,7 +47,7 @@
 
     <div id="pokemon-display" class="pokemonDisplay"></div>
     <button class="load-more" onclick="loadMorePokemons()">Load More</button>
-
+</div>
     <script src="script.js"></script>
   </body>
 </html>

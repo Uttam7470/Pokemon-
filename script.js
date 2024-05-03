@@ -25,6 +25,7 @@ function createPokemonCard(pokemonData, parentElement) {
     displayflip.classList.add("displayflip");
     const pokemonType = pokemonData.name;
     const pokemonName = pokemonData.name;
+
     displayflip.setAttribute("data-type", pokemonType);
     displayflip.setAttribute("data-name", pokemonName);
 
@@ -49,6 +50,7 @@ function createPokemonCard(pokemonData, parentElement) {
     const pokemonImageBack = document.createElement('img');
 
     const type = document.createElement("p");
+    type.classList.add("pokemon-type");
     const height = document.createElement("p");
     const weight = document.createElement("p");
 
@@ -61,7 +63,7 @@ function createPokemonCard(pokemonData, parentElement) {
             id.innerText = idText; 
             pokemonImage.src = imageUrl;
             pokemonImageBack.src = imageUrl2;
-            type.innerHTML = "<strong>Type:</strong> " + pokemonData.types[0].type.name;
+            type.innerHTML = pokemonData.types[0].type.name;
             height.innerHTML = "<strong>Height:</strong> " + pokemonData.height + " cm";
             weight.innerHTML = "<strong>Weight:</strong> " + pokemonData.weight + " kg";
 
@@ -130,4 +132,14 @@ function searchPokemonsByName() {
         }
     });
 }
+
+function resetSearch() {
+    document.getElementById("pokemon-name-input").value = ""; // Clear the input field
+    document.getElementById("carddata").selectedIndex = 0; // Reset the type selection
+    document.getElementById("pokemon-display").innerHTML = ""; // Clear the search results
+    setTimeout(function() {
+        window.location.reload();
+    }, 500);
+}
+
 
